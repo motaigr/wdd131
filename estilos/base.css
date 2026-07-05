@@ -67,7 +67,7 @@ main {
     gap: 20px;
 }
 
-main h1 {
+main h2:first-child {
     grid-column: 1 / -1;
 }
 
