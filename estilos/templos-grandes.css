@@ -1,0 +1,34 @@
+@media (min-width: 600px) {
+
+    /* Nav sempre visível, hambúrguer some */
+    #menu-hamburguer {
+        display: none;
+    }
+
+    nav {
+        display: block;
+        width: auto;
+    }
+
+    nav ul {
+        flex-direction: row;
+        margin-top: 0;
+        gap: 1.5rem;
+    }
+
+    header {
+        flex-wrap: nowrap;
+    }
+
+    /* Grid: 3 colunas na tela grande */
+    main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Breakpoint intermediário: 2 colunas em telas médias (tablet) */
+@media (min-width: 600px) and (max-width: 899px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
