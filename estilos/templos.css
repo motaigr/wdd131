@@ -84,27 +84,19 @@ nav ul li a:focus {
     color: var(--azul-noite);
 }
 
-/* Main */
 main {
     max-width: 800px;
     margin: 0 auto;
     padding: 1.5rem 1rem;
-}
-
-main h1 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    color: var(--azul-noite);
-}
-
-/* Grid dos templos — 1 coluna no mobile */
-main {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
 }
 
 main h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--azul-noite);
     grid-column: 1 / -1;
 }
 
