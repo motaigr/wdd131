@@ -138,7 +138,7 @@ footer {
 }
 
 footer a {
-    color: var(--azul-claro);
+    color: #9CC5EA;/
 }
 
 footer a:hover,
@@ -146,3 +146,4 @@ footer a:focus {
     color: var(--branco);
     text-decoration: underline;
 }
+
