@@ -49,7 +49,7 @@ header h1 {
 #menu-hamburguer:hover,
 #menu-hamburguer:focus {
     background-color: var(--azul-claro);
-    border-color: var(--azul-claro);
+    border-color: var(--azul-noite);
 }
 
 /* Nav escondido por padrão no mobile, abre com a classe .aberto */
