@@ -1,0 +1,125 @@
+:root {
+    --cor-primaria: #33403A;      /* grafite esverdeado */
+    --cor-secundaria: #B5763A;    /* âmbar/cobre */
+    --cor-destaque: #E8C170;      /* dourado claro */
+    --cor-fundo: #FAFAFA;
+    --cor-texto: #1A1A1A;
+    --fonte-titulo: 'Georgia', serif;
+    --fonte-corpo: system-ui, sans-serif;
+    --espaco-md: 1rem;
+    --espaco-lg: 2rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fonte-corpo);
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    line-height: 1.5;
+}
+
+header {
+    background-color: var(--cor-primaria);
+    color: white;
+    text-align: center;
+    padding: var(--espaco-md);
+}
+
+header h1 {
+    font-family: var(--fonte-titulo);
+}
+
+main img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    height: 100%;
+}
+
+#dados, #clima {
+    padding: var(--espaco-md);
+    border-bottom: 3px solid var(--cor-destaque);
+}
+
+#dados h2, #clima h2 {
+    color: var(--cor-secundaria);
+    margin-bottom: var(--espaco-md);
+    text-align: center;
+}
+
+dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem var(--espaco-md);
+}
+
+dt {
+    font-weight: bold;
+}
+
+/* ícone mobile SVG visível por padrão */
+.icone-clima-mobile {
+    display: block;
+    width: 40px;
+    margin: 0 auto var(--espaco-md);
+}
+
+/* pseudo-elemento emoji, escondido no mobile */
+#clima h2::after {
+    content: "☀️";
+    margin-left: 0.5rem;
+    display: none;
+}
+
+footer {
+    background-color: var(--cor-secundaria);
+    color: white;
+    text-align: center;
+    padding: var(--espaco-md);
+    font-size: 0.85rem;
+}
+
+/* ===== DESKTOP / TELA AMPLA ===== */
+@media (min-width: 800px) {
+    main {
+        position: relative;
+    }
+
+    main img {
+    height: 500px;
+    }
+
+    #dados {
+        position: absolute;
+        top: 80px;
+        left: var(--espaco-md);
+        background-color: rgba(255, 255, 255, 0.95);
+        width: 280px;
+        border: 2px solid var(--cor-primaria);
+        border-bottom: none;
+    }
+
+    #clima {
+        position: absolute;
+        bottom: var(--espaco-md);
+        right: var(--espaco-md);
+        background-color: rgba(255, 255, 255, 0.95);
+        width: 280px;
+        border: 2px solid var(--cor-primaria);
+        border-bottom: none;
+    }
+
+    /* esconde ícone SVG mobile, mostra emoji via pseudo-elemento */
+    .icone-clima-mobile {
+        display: none;
+    }
+
+    #clima h2::after {
+        display: inline;
+    }
+}

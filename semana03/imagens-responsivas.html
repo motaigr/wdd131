@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/imagens-responsivas.css">
+    <title>Imagens Responsivas</title>
+</head>
+<body>
+    <main>
+        <div class="principal">
+            <picture>
+                <source srcset="imagens/principal-grande.webp" media="(min-width: 1000px)">
+                <source srcset="imagens/principal-media.webp" media="(min-width: 500px)">
+                <img src="imagens/principal-pequena.webp" alt="Nome e localização do templo" width="500" height="250">
+            </picture>
+        </div>
+    </main>
+</body>
+</html>

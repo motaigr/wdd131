@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curitiba | Local</title>
+    <meta name="description" content="Página sobre Curitiba, Paraná - dados e clima local.">
+    <link rel="stylesheet" href="estilos/local.css">
+    <script src="scripts/local.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Curitiba</h1>
+    </header>
+
+    <main>
+        <picture>
+            <source media="(min-width: 800px)" srcset="imagens/curitiba-grande.webp">
+            <img src="imagens/curitiba-pequena.webp" alt="Vista da cidade de Curitiba, Paraná">
+        </picture>
+
+        <section id="dados">
+            <h2>Data</h2>
+            <dl>
+                <dt>Área:</dt>
+                <dd>434.967 km²</dd>
+
+                <dt>População:</dt>
+                <dd>1.963.726</dd>
+
+                <dt>Fundação:</dt>
+                <dd>29/03/1693</dd>
+
+                <dt>Idioma:</dt>
+                <dd>Português</dd>
+
+                <dt>Moeda:</dt>
+                <dd>Real (R$)</dd>
+
+                <dt>Fuso Horário:</dt>
+                <dd>UTC-3</dd>
+
+                <dt>Código de Área:</dt>
+                <dd>+55 41</dd>
+            </dl>
+        </section>
+
+        <section id="clima">
+            <h2>Clima</h2>
+            <img src="imagens/icone-clima.svg" alt="Ícone de clima" class="icone-clima-mobile">
+            <dl>
+                <dt>Temperatura:</dt>
+                <dd id="temperatura">--</dd>
+
+                <dt>Condições:</dt>
+                <dd id="condicoes">--</dd>
+
+                <dt>Vento:</dt>
+                <dd id="vento">--</dd>
+
+                <dt>Sensação Térmica:</dt>
+                <dd id="sensacaoTermica">--</dd>
+            </dl>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="ano"></span> Igor Mota - Curitiba, PR</p>
+        <p>Última modificação: <span id="ultimaModificacao"></span></p>
+    </footer>
+</body>
+</html>
