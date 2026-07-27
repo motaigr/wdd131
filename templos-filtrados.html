@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 131 – Album do Templo Filtrado - Igor Mota - Filtre templos por idade e tamanho.">
+    <meta name="author" content="Igor Mota">
+    <title>Álbum do Templo Filtrado - Igor Mota</title>
+    <link rel="stylesheet" href="estilos/templos-filtrados.css">
+    <link rel="stylesheet" href="estilos/templos-filtrados-grandes.css">
+    <script src="scripts/templos-filtrados.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <p class="logo">Álbum do Templo</p>
+        <button id="menu-hamburguer" aria-label="Abrir menu" aria-expanded="false">☰</button>
+        <nav id="menu-nav">
+    <ul>
+        <li><a href="#" data-filtro="home">Página Inicial</a></li>
+        <li><a href="#" data-filtro="antigos">Antigo</a></li>
+        <li><a href="#" data-filtro="novos">Novo</a></li>
+        <li><a href="#" data-filtro="grandes">Grande</a></li>
+        <li><a href="#" data-filtro="pequenos">Pequeno</a></li>
+    </ul>
+</nav>
+    </header>
+
+    <main>
+    <h1>Templos ao Redor do Mundo</h1>
+    <div id="temple-cards"></div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="data-atual"></span> Igor Mota - Curitiba, Paraná.</p>
+        <a href="https://www.churchofjesuschrist.org/temples/details/curitiba-brazil-temple?lang=por">Curitiba</a>
+        <p id="ultimaModificacao"></p>
+    </footer>
+</body>
+</html>
