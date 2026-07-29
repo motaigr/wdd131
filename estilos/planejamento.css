@@ -1,0 +1,125 @@
+/* ==========================================================================
+   Planejamento do Site - Curitiba Explorer
+   Esquema de cores: #2E7D32 (verde escuro) / #A5D6A7 (verde claro)
+   Tipografia: Poppins (títulos) / Open Sans (corpo)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+  --verde-escuro: #2E7D32;
+  --verde-claro: #A5D6A7;
+  --texto: #2b2b2b;
+  --fundo: #ffffff;
+  --fundo-secao: #f7f9f7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', Arial, sans-serif;
+  color: var(--texto);
+  background-color: var(--fundo);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--verde-escuro);
+  color: #ffffff;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Poppins', sans-serif;
+  margin: 0 0 0.25rem;
+  font-size: 1.6rem;
+}
+
+header h2 {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--verde-claro);
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem 3rem;
+}
+
+section {
+  background-color: var(--fundo-secao);
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin-top: 1.5rem;
+}
+
+section h2 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--verde-escuro);
+  border-bottom: 2px solid var(--verde-claro);
+  padding-bottom: 0.4rem;
+  margin-top: 0;
+}
+
+section h3 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--texto);
+  margin-bottom: 0.5rem;
+}
+
+ul {
+  padding-left: 1.25rem;
+}
+
+/* Swatches de cor */
+.color {
+  display: inline-block;
+  width: 140px;
+  height: 60px;
+  margin: 0 0.75rem 0.75rem 0;
+  border-radius: 6px;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #cccccc;
+}
+
+.color.verde {
+  background-color: var(--verde-escuro);
+}
+
+.color.claro {
+  background-color: var(--verde-claro);
+  color: var(--texto);
+}
+
+/* Wireframes responsivos */
+section img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0.75rem 0;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+/* Telas maiores: wireframes lado a lado */
+@media (min-width: 700px) {
+  section img {
+    max-width: 48%;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 1.5%;
+  }
+}
