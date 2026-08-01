@@ -96,3 +96,15 @@ footer {
 footer a {
   color: #cfd8ea;
 }
+
+@media (max-width: 600px) {
+  main {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  fieldset label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+}
