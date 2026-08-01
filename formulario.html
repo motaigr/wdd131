@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Formulário de avaliação de produto - WDD 131">
+  <meta name="description" content="Formulário de avaliação de produto com classificação por estrelas, recursos úteis e comentários - WDD 131">
   <meta name="author" content="Igor Gonçalves">
   <title>Formulário de Avaliação</title>
   <link rel="stylesheet" href="estilos/formulario.css">
@@ -37,16 +37,16 @@
         <input type="radio" id="estrela1" name="classificacao" value="1" required>
         <label for="estrela1">&star;</label>
 
-        <input type="radio" id="estrela2" name="classificacao" value="2">
+        <input type="radio" id="estrela2" name="classificacao" value="2" required>
         <label for="estrela2">&star;&star;</label>
 
-        <input type="radio" id="estrela3" name="classificacao" value="3">
+        <input type="radio" id="estrela3" name="classificacao" value="3" required>
         <label for="estrela3">&star;&star;&star;</label>
 
-        <input type="radio" id="estrela4" name="classificacao" value="4">
+        <input type="radio" id="estrela4" name="classificacao" value="4" required>
         <label for="estrela4">&star;&star;&star;&star;</label>
 
-        <input type="radio" id="estrela5" name="classificacao" value="5">
+        <input type="radio" id="estrela5" name="classificacao" value="5" required>
         <label for="estrela5">&star;&star;&star;&star;&star;</label>
       </fieldset>
     </div>
@@ -59,6 +59,7 @@
     <div class="form-group">
         <fieldset>
             <legend>Recursos Úteis</legend>
+            <option value="" disabled selected>Selecione um produto...</option>
 
             <input type="checkbox" id="recurso-instalacao" name="recursos" value="facil-instalacao">
             <label for="recurso-instalacao">Fácil instalação</label>
