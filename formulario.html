@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulário de avaliação de produto - WDD 131">
+  <meta name="author" content="Igor Gonçalves">
+  <title>Formulário de Avaliação</title>
+  <link rel="stylesheet" href="estilos/formulario.css">
+  <script src="scripts/formulario.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Avaliação de Produto</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="templos.html">Templos</a>
+      <a href="formulario.html">Avaliação</a>
+    </nav>
+  </header>
+
+  <main>
+  <form action="avaliacao.html" method="get">
+
+    <div class="form-group">
+      <label for="produto">Nome do Produto</label>
+      <select id="produto" name="produto" required>
+        <option value="" disabled selected>Selecione um Produto...</option>
+        <!-- as demais options serão inseridas via JavaScript -->
+      </select>
+    </div>
+
+    <div class="form-group">
+      <fieldset>
+        <legend>Classificação Geral</legend>
+
+        <input type="radio" id="estrela1" name="classificacao" value="1" required>
+        <label for="estrela1">&star;</label>
+
+        <input type="radio" id="estrela2" name="classificacao" value="2">
+        <label for="estrela2">&star;</label>
+
+        <input type="radio" id="estrela3" name="classificacao" value="3">
+        <label for="estrela3">&star;</label>
+
+        <input type="radio" id="estrela4" name="classificacao" value="4">
+        <label for="estrela4">&star;</label>
+
+        <input type="radio" id="estrela5" name="classificacao" value="5">
+        <label for="estrela5">&star;</label>
+      </fieldset>
+    </div>
+
+    <div class="form-group">
+      <label for="data-instalacao">Data de Instalação</label>
+      <input type="date" id="data-instalacao" name="data-instalacao" required>
+    </div>
+
+    <div class="form-group">
+        <fieldset>
+            <legend>Recursos Úteis</legend>
+
+            <input type="checkbox" id="recurso-instalacao" name="recursos" value="facil-instalacao">
+            <label for="recurso-instalacao">Fácil instalação</label>
+
+            <input type="checkbox" id="recurso-desempenho" name="recursos" value="bom-desempenho">
+            <label for="recurso-desempenho">Bom desempenho</label>
+
+            <input type="checkbox" id="recurso-durabilidade" name="recursos" value="durabilidade">
+            <label for="recurso-durabilidade">Durabilidade</label>
+
+            <input type="checkbox" id="recurso-custo" name="recursos" value="custo-beneficio">
+            <label for="recurso-custo">Bom custo-benefício</label>
+
+            <input type="checkbox" id="recurso-suporte" name="recursos" value="suporte">
+            <label for="recurso-suporte">Bom suporte técnico</label>
+        </fieldset>
+    </div>
+
+    <div class="form-group">
+    <label for="avaliacao-texto">Avaliação Escrita</label>
+    <textarea id="avaliacao-texto" name="avaliacao-texto" rows="5" placeholder="Conte sua experiência com o produto..."></textarea>
+    </div>
+
+    <div class="form-group">
+    <label for="nome-usuario">Nome de Usuário</label>
+    <input type="text" id="nome-usuario" name="nome-usuario" placeholder="Opcional">
+    </div>
+
+    <div class="form-group">
+    <input type="submit" value="Enviar Avaliação">
+    </div>
+  </form>
+</main>
+
+  <footer>
+    <p>&copy; <span id="data-atual"></span> Igor Gonçalves - Curitiba, Paraná.</p>
+        <p id="ultimaModificacao"></p>
+  </footer>
+</body>
+</html>
