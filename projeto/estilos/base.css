@@ -10,6 +10,7 @@
 :root {
   --verde-escuro: #2E7D32;
   --verde-medio: #3F9142;
+  --verde-hover: #256B29;
   --verde-claro: #A5D6A7;
   --verde-fundo: #F1F8F1;
 
@@ -186,7 +187,7 @@ select:focus-visible {
 }
 
 .botao-primario:hover {
-  background-color: var(--verde-medio);
+  background-color: var(--verde-hover);
 }
 
 .botao-secundario {
