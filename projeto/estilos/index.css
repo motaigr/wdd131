@@ -1,0 +1,164 @@
+/* ==========================================================================
+   Curitiba Explorer — index.css
+   Estilos específicos da página inicial.
+   ========================================================================== */
+
+/* -------------------- Hero -------------------- */
+.hero {
+  background-color: var(--verde-escuro);
+  color: var(--branco);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero .container {
+  padding-block: 4.5rem 5rem;
+  display: grid;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-eyebrow {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--branco);
+  margin-bottom: 0.75rem;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.1rem);
+  max-width: 18ch;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  max-width: 52ch;
+  font-size: 1.05rem;
+  color: #E9F5E9;
+}
+
+.hero-acoes {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.hero-acoes .botao-secundario {
+  border-color: var(--branco);
+  color: var(--branco);
+}
+
+.hero-acoes .botao-secundario:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Trilha decorativa: remete ao ato de "explorar" um caminho pela cidade */
+.hero-trilha {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.16;
+}
+
+.hero-trilha svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* -------------------- Destaques (cards) -------------------- */
+.grade-destaques {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.cartao-destaque {
+  background-color: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.cartao-destaque:hover {
+  box-shadow: var(--sombra);
+  transform: translateY(-3px);
+}
+
+.cartao-destaque img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  width: 100%;
+}
+
+.cartao-destaque-corpo {
+  padding: 1.25rem 1.35rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cartao-destaque h3 {
+  font-size: 1.15rem;
+  color: var(--texto);
+}
+
+.cartao-destaque p {
+  color: var(--texto-suave);
+  font-size: 0.92rem;
+  flex: 1;
+}
+
+.cartao-destaque .botao {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+  padding: 0.55rem 1.1rem;
+  font-size: 0.85rem;
+}
+
+/* -------------------- Contador de favoritos -------------------- */
+.aviso-favoritos {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: var(--branco);
+  border: 1.5px solid var(--verde-claro);
+  border-radius: var(--raio);
+  padding: 0.85rem 1.15rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--verde-escuro);
+  margin-bottom: 2rem;
+}
+
+.aviso-favoritos .icone {
+  font-size: 1.1rem;
+}
+
+/* -------------------- Formulário de contato -------------------- */
+.bloco-formulario {
+  background-color: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 2rem;
+  max-width: 560px;
+  box-shadow: var(--sombra);
+}
+
+.linha-campos {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 560px) {
+  .linha-campos.duas-colunas {
+    grid-template-columns: 1fr 1fr;
+  }
+}

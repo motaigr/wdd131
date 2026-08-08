@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curitiba Explorer — Guia de pontos turísticos e parques</title>
+  <meta name="description" content="Guia digital para descobrir os principais pontos turísticos e parques de Curitiba, com roteiros, filtros por categoria e lista de favoritos.">
+  <link rel="stylesheet" href="estilos/base.css">
+  <link rel="stylesheet" href="estilos/index.css">
+</head>
+<body>
+
+  <a class="pular-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho">
+    <div class="container">
+      <a class="marca" href="index.html">
+        <span class="marca-icone" aria-hidden="true">🌳</span>
+        Curitiba Explorer
+      </a>
+      <nav class="navegacao" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html" aria-current="page">Início</a></li>
+          <li><a href="lugares.html">Lugares</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <section class="hero">
+      <div class="hero-trilha" aria-hidden="true">
+        <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path d="M-20,350 C150,250 250,420 400,300 C550,180 650,340 820,220" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="2 14" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="container">
+        <p class="hero-eyebrow">Guia digital de Curitiba</p>
+        <h1>Descubra Curitiba no seu próprio ritmo</h1>
+        <p>Pontos turísticos, parques e áreas verdes reunidos em um só lugar, com filtros por categoria, busca rápida e uma lista de favoritos que fica salva no seu navegador.</p>
+        <div class="hero-acoes">
+          <a class="botao botao-secundario" href="lugares.html">Explorar lugares</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao">
+      <div class="container">
+
+        <p class="aviso-favoritos" id="aviso-favoritos">
+          <span class="icone" aria-hidden="true">⭐</span>
+          <span id="texto-favoritos">Você ainda não favoritou nenhum lugar.</span>
+        </p>
+
+        <div class="secao-cabecalho">
+          <h2 id="saudacao">Bem-vindo(a) ao Curitiba Explorer</h2>
+          <p>Separamos três paradas essenciais para começar seu roteiro pela cidade. A lista completa, com filtros e busca, está na página Lugares.</p>
+        </div>
+
+        <div class="grade-destaques">
+
+          <article class="cartao-destaque">
+            <img src="imagens/jardim-botanico.webp" alt="Estufa de vidro do Jardim Botânico de Curitiba cercada por jardins geométricos" loading="lazy" width="640" height="480">
+            <div class="cartao-destaque-corpo">
+              <h3>Jardim Botânico</h3>
+              <p>Cartão-postal da cidade, com sua estufa de vidro no estilo art nouveau e jardins geométricos inspirados em parques franceses.</p>
+              <a class="botao botao-primario" href="lugares.html">Ver detalhes</a>
+            </div>
+          </article>
+
+          <article class="cartao-destaque">
+            <img src="imagens/parque-barigui.webp" alt="Lago cercado de árvores no Parque Barigui" loading="lazy" width="640" height="480">
+            <div class="cartao-destaque-corpo">
+              <h3>Parque Barigui</h3>
+              <p>Um dos maiores parques urbanos da cidade, com trilhas para caminhada, pista de cooper e um lago cercado de área verde.</p>
+              <a class="botao botao-primario" href="lugares.html">Ver detalhes</a>
+            </div>
+          </article>
+
+          <article class="cartao-destaque">
+            <img src="imagens/opera-de-arame.webp" alt="Estrutura tubular de metal e vidro da Ópera de Arame em meio à vegetação" loading="lazy" width="640" height="480">
+            <div class="cartao-destaque-corpo">
+              <h3>Ópera de Arame</h3>
+              <p>Teatro construído em estrutura tubular metálica dentro de uma pedreira, rodeado por mata nativa e um pequeno lago.</p>
+              <a class="botao botao-primario" href="lugares.html">Ver detalhes</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="secao secao-alt" id="contato">
+      <div class="container">
+        <div class="secao-cabecalho">
+          <h2>Fale com a gente</h2>
+          <p>Tem uma sugestão de lugar, encontrou uma informação desatualizada ou quer receber novidades sobre roteiros? Preencha o formulário abaixo.</p>
+        </div>
+
+        <form class="bloco-formulario" id="form-contato" novalidate>
+          <fieldset style="border: none; padding: 0; margin: 0;">
+            <legend class="oculto">Formulário de contato</legend>
+
+            <div class="campo">
+              <label for="campo-nome">Nome</label>
+              <input type="text" id="campo-nome" name="nome" autocomplete="name" required>
+            </div>
+
+            <div class="linha-campos duas-colunas">
+              <div class="campo">
+                <label for="campo-email">E-mail</label>
+                <input type="email" id="campo-email" name="email" autocomplete="email" required>
+              </div>
+
+              <div class="campo">
+                <label for="campo-interesse">Tenho mais interesse em</label>
+                <select id="campo-interesse" name="interesse">
+                  <option value="pontos-turisticos">Pontos turísticos</option>
+                  <option value="parques">Parques</option>
+                  <option value="roteiros">Roteiros personalizados</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="campo">
+              <label for="campo-mensagem">Mensagem</label>
+              <textarea id="campo-mensagem" name="mensagem" rows="4" required></textarea>
+              <small>Conte o que você gostaria de ver no site.</small>
+            </div>
+
+            <button class="botao botao-primario" type="submit">Enviar mensagem</button>
+
+            <p class="mensagem-status oculto" id="status-formulario" role="status" aria-live="polite"></p>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <h2>Curitiba Explorer</h2>
+      <nav class="rodape-links" aria-label="Links do rodapé">
+        <a href="index.html">Início</a>
+        <a href="lugares.html">Lugares</a>
+        <a href="referencias.html">Referências</a>
+      </nav>
+      <p class="rodape-copyright">Projeto acadêmico desenvolvido para o curso WDD131 — BYU-Pathway Worldwide.</p>
+    </div>
+  </footer>
+
+  <script src="scripts/index.js" defer></script>
+</body>
+</html>

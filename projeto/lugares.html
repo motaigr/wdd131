@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lugares — Curitiba Explorer</title>
+  <meta name="description" content="Explore pontos turísticos e parques de Curitiba com filtro por categoria, busca e lista de favoritos salva no navegador.">
+  <link rel="stylesheet" href="estilos/base.css">
+  <link rel="stylesheet" href="estilos/lugares.css">
+</head>
+<body>
+
+  <a class="pular-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho">
+    <div class="container">
+      <a class="marca" href="index.html">
+        <span class="marca-icone" aria-hidden="true">🌳</span>
+        Curitiba Explorer
+      </a>
+      <nav class="navegacao" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="lugares.html" aria-current="page">Lugares</a></li>
+          <li><a href="index.html#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <section class="pagina-cabecalho">
+      <div class="container">
+        <h1>Pontos turísticos e parques</h1>
+        <p>Filtre por categoria, busque pelo nome ou bairro e favorite os lugares que você quer visitar. Seus favoritos ficam salvos neste navegador.</p>
+      </div>
+    </section>
+
+    <section class="secao">
+      <div class="container">
+
+        <div class="barra-controles">
+          <div class="filtros" role="group" aria-label="Filtrar por categoria">
+            <button class="filtro-botao" type="button" data-filtro="todos" aria-pressed="true">Todos</button>
+            <button class="filtro-botao" type="button" data-filtro="ponto-turistico" aria-pressed="false">Pontos turísticos</button>
+            <button class="filtro-botao" type="button" data-filtro="parque" aria-pressed="false">Parques</button>
+          </div>
+
+          <div class="campo-busca">
+            <label for="campo-busca-lugar" class="oculto">Buscar por nome ou bairro</label>
+            <input type="search" id="campo-busca-lugar" placeholder="Buscar por nome ou bairro...">
+          </div>
+        </div>
+
+        <p class="contador-resultados" id="contador-resultados" aria-live="polite"></p>
+
+        <div class="grade-lugares" id="grade-lugares">
+          <!-- Cards inseridos dinamicamente por scripts/lugares.js -->
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <h2>Curitiba Explorer</h2>
+      <nav class="rodape-links" aria-label="Links do rodapé">
+        <a href="index.html">Início</a>
+        <a href="lugares.html">Lugares</a>
+        <a href="referencias.html">Referências</a>
+      </nav>
+      <p class="rodape-copyright">Projeto acadêmico desenvolvido para o curso WDD131 — BYU-Pathway Worldwide.</p>
+    </div>
+  </footer>
+
+  <script src="scripts/lugares.js" defer></script>
+</body>
+</html>

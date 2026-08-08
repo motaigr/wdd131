@@ -1,0 +1,199 @@
+/* ==========================================================================
+   Curitiba Explorer — lugares.css
+   Estilos específicos da página de lugares (filtros, busca, cards).
+   ========================================================================== */
+
+.pagina-cabecalho {
+  background-color: var(--verde-fundo);
+  border-bottom: 1px solid var(--borda);
+}
+
+.pagina-cabecalho .container {
+  padding-block: 2.5rem;
+}
+
+.pagina-cabecalho h1 {
+  color: var(--verde-escuro);
+  font-size: 2rem;
+}
+
+.pagina-cabecalho p {
+  color: var(--texto-suave);
+  max-width: 60ch;
+  margin-bottom: 0;
+}
+
+/* -------------------- Barra de controles -------------------- */
+.barra-controles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.filtros {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.filtro-botao {
+  font-family: var(--fonte-corpo);
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--borda);
+  background-color: var(--branco);
+  color: var(--texto-suave);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.filtro-botao:hover {
+  border-color: var(--verde-medio);
+  color: var(--verde-escuro);
+}
+
+.filtro-botao[aria-pressed="true"] {
+  background-color: var(--verde-escuro);
+  border-color: var(--verde-escuro);
+  color: var(--branco);
+}
+
+.campo-busca {
+  position: relative;
+  min-width: 220px;
+  flex: 1;
+  max-width: 320px;
+}
+
+.campo-busca input {
+  width: 100%;
+  font-family: var(--fonte-corpo);
+  font-size: 0.95rem;
+  padding: 0.6rem 0.9rem;
+  border: 1.5px solid var(--borda);
+  border-radius: 999px;
+}
+
+.campo-busca input:focus {
+  border-color: var(--verde-medio);
+}
+
+.contador-resultados {
+  font-size: 0.88rem;
+  color: var(--texto-suave);
+  margin-bottom: 1.5rem;
+}
+
+/* -------------------- Grid de lugares -------------------- */
+.grade-lugares {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+.cartao-lugar {
+  background-color: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.cartao-lugar:hover {
+  box-shadow: var(--sombra);
+  transform: translateY(-3px);
+}
+
+.cartao-lugar img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  width: 100%;
+}
+
+.cartao-lugar-corpo {
+  padding: 1.1rem 1.25rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cartao-lugar-categoria {
+  font-family: var(--fonte-titulo);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--verde-escuro);
+  margin-bottom: 0.35rem;
+}
+
+.cartao-lugar h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.35rem;
+}
+
+.cartao-lugar-bairro {
+  font-size: 0.8rem;
+  color: var(--texto-suave);
+  margin-bottom: 0.6rem;
+}
+
+.cartao-lugar p.descricao {
+  color: var(--texto-suave);
+  font-size: 0.92rem;
+  flex: 1;
+}
+
+.botao-favorito {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.92);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.15s ease;
+}
+
+.botao-favorito:hover {
+  transform: scale(1.1);
+}
+
+.botao-favorito[aria-pressed="true"] {
+  color: #E8A400;
+}
+
+.mensagem-vazia {
+  text-align: center;
+  color: var(--texto-suave);
+  padding: 3rem 1rem;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 620px) {
+  .barra-controles {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .campo-busca {
+    max-width: none;
+  }
+}
